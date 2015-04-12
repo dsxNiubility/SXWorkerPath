@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7527" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="WorkDetail" representedClassName="WorkDetail" syncable="YES">
+        <attribute name="workDate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="workEndTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="workSourceTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="thePeople" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkPeople" inverseName="theDetails" inverseEntity="WorkPeople" syncable="YES"/>
+    </entity>
+    <entity name="WorkPeople" representedClassName="WorkPeople" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="theDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkDetail" inverseName="thePeople" inverseEntity="WorkDetail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WorkPeople" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="WorkDetail" positionX="-54" positionY="9" width="128" height="30"/>
+    </elements>
+</model>
